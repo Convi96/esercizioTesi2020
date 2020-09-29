@@ -4,7 +4,6 @@ import { getErrorCodeFromString } from '../utils';
 const config = require('../config/config');
 
 const oracledb = require('oracledb');
-oracledb.autoCommit = true;
 
 export async function initDatabaseConnection() {
 
