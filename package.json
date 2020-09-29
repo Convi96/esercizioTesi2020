@@ -1,0 +1,30 @@
+{
+  "name": "eserciziotesi2020",
+  "version": "1.0.0",
+  "description": "esercizio tesi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/node": "^7.10.5",
+    "@google-cloud/dialogflow": "^3.3.0",
+    "body-parser": "^1.19.0",
+    "dialogflow": "^1.2.0",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
+    "node-sql-parser": "^3.1.0",
+    "oracledb": "^5.0.0",
+    "pg": "^8.3.3",
+    "uuid": "^8.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "nodemon": "^2.0.4"
+  }
+}
