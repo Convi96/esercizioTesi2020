@@ -10,7 +10,7 @@ const sessionClient = new dialogflow.SessionsClient({credentials: require(config
 const sessionPath = sessionClient.projectAgentSessionPath(config.PROJECT_ID, sessionId);
 
 export async function createResponse(intent, params) {
-    console.log(intent)
+  
     switch (intent) {
         case constants.ERROR_INTENT:
             const error = params.ErrorCode;
@@ -30,7 +30,6 @@ export async function createResponse(intent, params) {
             if (resultQuery == constants.ERROR_DB) {
                 return constants.ERROR_DB;
             } else if (resultQuery == constants.CORRECT_QUERY) {
-                console.log("ok")
                 return constants.CORRECT_QUERY;
             } else if (resultQuery.length > 0) {
                 const spiegazione = checkPlaceholderError(error, resultQuery[0][3]);

@@ -26,9 +26,8 @@ export async function getAllRows() {
         const connection = await oracledb.getConnection();
         const result = await connection.execute("SELECT * FROM spiegazioni")
         connection.close();
-        console.log(result)
+        return result;
     } catch (error) {
-        console.log(error);
         return ERROR_DB;
     }
     
@@ -69,7 +68,6 @@ export async function checkQuery(query) {
             await connection.execute("EXPLAIN PLAN FOR " + query);
             return CORRECT_QUERY;
         } catch (error) {
-            console.log(error);
             const code = getErrorCodeFromString(error.message);
             const result = await connection.execute("SELECT * FROM spiegazioni WHERE errore = :errore",[code])
             connection.close();
